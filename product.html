@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore MISTRESSA's luxury fragrances — each bottle is a collaboration between master perfumers and rare ingredients.">
+  <meta property="og:title" content="Product — MISTRESSA">
+  <meta property="og:description" content="Explore MISTRESSA's luxury fragrances — each bottle is a collaboration between master perfumers and rare ingredients.">
+  <meta property="og:image" content="images/landing.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="js/theme.js"></script>
+  <title>Product — MISTRESSA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="splash" id="splash">
+    <div class="splash-content">
+      <span class="splash-logo">MISTRESSA</span>
+      <span class="splash-tagline">Luxury Fragrances</span>
+    </div>
+  </div>
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline poster="images/landing.png">
+      <source src="images/landing-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MISTRESSA</a>
+      <button class="theme-toggle" aria-label="Switch to dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Collections</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="product-detail" id="main-content">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-image fade-in">
+          <img id="detail-img" src="" alt="">
+        </div>
+        <div class="detail-info fade-in">
+          <h1 id="detail-name"></h1>
+          <p class="detail-notes" id="detail-notes"></p>
+          <p class="detail-price" id="detail-price"></p>
+          <p class="detail-desc" id="detail-desc"></p>
+
+          <div class="size-selector">
+            <span class="size-label">Size</span>
+            <div class="size-options">
+              <button class="size-btn active" data-size="50">50 ml</button>
+              <button class="size-btn" data-size="100">100 ml</button>
+            </div>
+          </div>
+
+          <div class="quantity-selector">
+            <button class="qty-down">−</button>
+            <input type="number" id="qty-input" value="1" min="1" readonly>
+            <button class="qty-up">+</button>
+          </div>
+
+          <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">MISTRESSA</a>
+          <p>Luxury fragrances crafted for those who dare to leave a lasting impression.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="products.html">Collections</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="about.html#contact">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 MISTRESSA. All rights reserved.</span>
+        <span>Luxury in every drop.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const products = {
+      'midnight-velvet': {
+        name: 'Midnight Velvet',
+        notes: 'Black rose · Oud · Vanilla',
+        price50: 185, price100: 275,
+        image: 'images/image_1.png',
+        desc: 'An opulent and deeply captivating fragrance that unfolds like a velvet night. Black rose meets smoky oud, softened by rich vanilla — a scent for unforgettable evenings.'
+      },
+      'silken-dawn': {
+        name: 'Silken Dawn',
+        notes: 'Bergamot · Jasmine · Amber',
+        price50: 165, price100: 245,
+        image: 'images/image_2.png',
+        desc: 'A luminous fragrance that captures the first light of morning. Bright bergamot and ethereal jasmine settle into a warm amber base — radiant and refined.'
+      },
+      'noir-enigma': {
+        name: 'Noir Enigma',
+        notes: 'Leather · Saffron · Patchouli',
+        price50: 210, price100: 310,
+        image: 'images/image_3.png',
+        desc: 'Dark, bold, and utterly mysterious. Leather and saffron intertwine with earthy patchouli to create a fragrance that commands attention without a single word.'
+      },
+      'crimson-veil': {
+        name: 'Crimson Veil',
+        notes: 'Pomegranate · Pink Pepper · Musk',
+        price50: 175, price100: 260,
+        image: 'images/image_4.png',
+        desc: 'A seductive burst of ruby pomegranate and pink pepper gives way to a warm, lingering musk. Playful yet powerful — a veil of intrigue.'
+      },
+      'ivory-haze': {
+        name: 'Ivory Haze',
+        notes: 'White Tea · Fig · Sandalwood',
+        price50: 155, price100: 230,
+        image: 'images/image_5.png',
+        desc: 'Soft, serene, and effortlessly elegant. White tea and creamy fig are wrapped in sandalwood for a tranquil scent that lingers like a gentle memory.'
+      },
+      'obsidian-night': {
+        name: 'Obsidian Night',
+        notes: 'Tobacco · Amber · Vetiver',
+        price50: 195, price100: 290,
+        image: 'images/image_6.png',
+        desc: 'Deep and hypnotic, like a midnight sky. Rich tobacco and golden amber are grounded by earthy vetiver — a fragrance of quiet power.'
+      }
+    };
+
+    let selectedSize = 50;
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || 'midnight-velvet';
+    const product = products[id];
+
+    function getPrice() {
+      return selectedSize === 100 ? product.price100 : product.price50;
+    }
+
+    function updatePriceDisplay() {
+      const el = document.getElementById('detail-price');
+      el.textContent = `$${getPrice()}`;
+      el.dataset.size = selectedSize;
+    }
+
+    function updateCartBtn() {
+      const btn = document.getElementById('add-to-cart');
+      btn.dataset.id = id;
+      btn.dataset.name = product.name;
+      btn.dataset.price = getPrice();
+      btn.dataset.notes = product.notes;
+      btn.dataset.image = product.image;
+      btn.dataset.size = selectedSize;
+    }
+
+    if (product) {
+      document.title = `${product.name} — MISTRESSA`;
+      document.getElementById('detail-img').src = product.image;
+      document.getElementById('detail-img').alt = product.name;
+      document.getElementById('detail-name').textContent = product.name;
+      document.getElementById('detail-notes').textContent = product.notes;
+      document.getElementById('detail-desc').textContent = product.desc;
+      updatePriceDisplay();
+      updateCartBtn();
+    }
+
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedSize = parseInt(btn.dataset.size, 10);
+        updatePriceDisplay();
+        updateCartBtn();
+      });
+    });
+  </script>
+</body>
+</html>

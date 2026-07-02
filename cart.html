@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your shopping cart at MISTRESSA. Secure checkout via Stripe and PayPal.">
+  <meta property="og:title" content="Cart — MISTRESSA">
+  <meta property="og:description" content="View your shopping cart at MISTRESSA. Secure checkout via Stripe and PayPal.">
+  <meta property="og:image" content="images/landing.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="js/theme.js"></script>
+  <title>Cart — MISTRESSA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="splash" id="splash">
+    <div class="splash-content">
+      <span class="splash-logo">MISTRESSA</span>
+      <span class="splash-tagline">Luxury Fragrances</span>
+    </div>
+  </div>
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline poster="images/landing.png">
+      <source src="images/landing-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MISTRESSA</a>
+      <button class="theme-toggle" aria-label="Switch to dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Collections</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <h1>Shopping Cart</h1>
+    </div>
+  </section>
+
+  <section class="cart-page">
+    <div class="container">
+      <div class="cart-empty">
+        <div class="cart-empty-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+        </div>
+        <p>Your cart is empty.</p>
+        <a href="products.html" class="btn btn-outline-dark">Browse Collections</a>
+      </div>
+
+      <div class="cart-items"></div>
+
+      <div class="cart-summary" style="display: none;">
+        <div class="total-row">
+          <span class="total-label">Total</span>
+          <span class="total-amount" id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn" onclick="alert('Secure checkout coming soon')">
+          Proceed to Checkout
+        </button>
+        <p style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--gray);">
+          Secure checkout via Stripe / PayPal
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">MISTRESSA</a>
+          <p>Luxury fragrances crafted for those who dare to leave a lasting impression.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="products.html">Collections</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="about.html#contact">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 MISTRESSA. All rights reserved.</span>
+        <span>Luxury in every drop.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
